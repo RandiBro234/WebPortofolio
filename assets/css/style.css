@@ -235,42 +235,6 @@ section{
 }
 
 
-/* ===========================
-   LOADER
-=========================== */
-
-#loader{
-
-    position:fixed;
-
-    inset:0;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:var(--bg);
-
-    z-index:9999;
-
-    transition:.8s;
-
-}
-
-#loader h1{
-
-    font-family:'IBM Plex Mono',monospace;
-
-    font-size:52px;
-
-    letter-spacing:8px;
-
-    animation:loaderPulse 1.2s infinite;
-
-}
-
 
 /* ===========================
    HEADER
