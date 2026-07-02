@@ -6,9 +6,8 @@ const typingElement = document.getElementById("typing");
 
 const texts = [
     "Applied Data Science Student",
-    "Machine Learning Engineer",
+    "ML Engineer",
     "Data Analyst",
-    "Backend Developer",
     "AI Enthusiast"
 ];
 
