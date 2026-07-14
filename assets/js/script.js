@@ -1,27 +1,4 @@
 /* ==========================================
-   DARK MODE
-========================================== */
-
-const themeBtn = document.getElementById("theme-toggle");
-
-themeBtn.addEventListener("click", () => {
-
-    document.body.classList.toggle("dark");
-
-    if(document.body.classList.contains("dark")){
-
-        themeBtn.innerHTML = "☀️";
-
-    }else{
-
-        themeBtn.innerHTML = "🌙";
-
-    }
-
-});
-
-
-/* ==========================================
    MOBILE MENU
 ========================================== */
 

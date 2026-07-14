@@ -59,31 +59,6 @@
 
 
 /* ===========================
-   DARK MODE
-=========================== */
-
-body.dark{
-
-    --bg:#111111;
-
-    --bg-secondary:#181818;
-
-    --text:#ffffff;
-
-    --text-light:#bbbbbb;
-
-    --primary:#ffffff;
-
-    --border:#2e2e2e;
-
-    --card:#1b1b1b;
-
-    --hover:#262626;
-
-}
-
-
-/* ===========================
    HTML
 =========================== */
 
@@ -350,15 +325,6 @@ header{
 
 }
 
-#theme-toggle{
-
-    border:none;
-    background:none;
-    font-size:24px;
-    cursor:pointer;
-
-}
-
 .hamburger{
 
     display:none;
@@ -559,25 +525,6 @@ header{
     align-items:center;
 
     gap:18px;
-
-}
-
-
-/* ===========================
-   DARK MODE BUTTON
-=========================== */
-
-#theme-toggle{
-
-    font-size:20px;
-
-    transition:.3s;
-
-}
-
-#theme-toggle:hover{
-
-    transform:rotate(20deg);
 
 }
 
