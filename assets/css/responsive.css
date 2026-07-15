@@ -1,389 +1,317 @@
 /* =====================================================
    RESPONSIVE DESIGN
-   Portfolio - Randi Nandika Danendra
 ===================================================== */
 
 
-/* ===========================================
-   Laptop (1200px)
-=========================================== */
+/* ===========================
+   Laptop
+=========================== */
 
-@media (max-width:1200px){
+@media (max-width:1200px) {
 
-    .hero{
-        gap:40px;
+    .hero {
+        gap: 40px;
     }
 
-    .hero h1{
-        font-size:56px;
+    .hero h1 {
+        font-size: 56px;
     }
 
 }
 
 
-/* ===========================================
+/* ===========================
    Tablet Landscape
-=========================================== */
+=========================== */
 
-@media (max-width:992px){
+@media (max-width:992px) {
 
-    html{
-        font-size:95%;
+    html {
+        font-size: 95%;
     }
 
-    .navbar{
-        padding:18px 40px;
+    .navbar {
+        padding: 0 32px;
     }
 
-    section{
-        padding:90px 40px;
+    section {
+        padding: 90px 40px;
     }
 
-    .hero{
-
-        grid-template-columns:1fr;
-        text-align:center;
-        gap:60px;
-
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 60px;
     }
 
-    .hero-left{
-
-        align-items:center;
-
+    .hero-left {
+        align-items: center;
     }
 
-    .hero-button{
-
-        justify-content:center;
-
+    .hero-button {
+        justify-content: center;
     }
 
-    .hero-right img{
-
-        width:350px;
-
+    .hero-right img {
+        width: 340px;
     }
 
-    .skills-container{
-
-        grid-template-columns:repeat(2,1fr);
-
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .project-container{
-
-        grid-template-columns:repeat(2,1fr);
-
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
 
-/* ===========================================
-   Tablet Portrait
-=========================================== */
+/* ===========================
+   Tablet & Mobile
+=========================== */
 
-@media(max-width:768px){
+@media (max-width:768px) {
 
-    html{
+    html {
+        font-size: 90%;
+    }
 
-        font-size:90%;
+    section {
+        padding: 80px 25px;
+    }
+
+    /* Navbar */
+
+    .navbar {
+        top: 12px;
+        width: calc(100% - 30px);
+        height: 68px;
+        padding: 0 22px;
+        border-radius: 18px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+
+        position: fixed;
+
+        top: 92px;
+        right: -300px;
+
+        width: 260px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+
+        padding: 30px;
+
+        background: #fff;
+
+        border-radius: 18px;
+
+        box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+
+        transition: .35s ease;
+
+        z-index: 9999;
 
     }
 
-    .navbar{
-
-        padding:18px 25px;
-
+    .nav-menu.active {
+        right: 15px;
     }
 
-    section{
-
-        padding:80px 25px;
-
+    .nav-menu a {
+        font-size: 16px;
     }
 
-    .nav-menu{
+    /* Hero */
 
-        position:fixed;
-
-        top:80px;
-
-        right:-100%;
-
-        width:280px;
-
-        height:calc(100vh - 80px);
-
-        flex-direction:column;
-
-        justify-content:flex-start;
-
-        align-items:flex-start;
-
-        padding:40px;
-
-        transition:.4s;
-        background:rgba(255,255,255,.96);
-        border-left:1px solid var(--border);
-        box-shadow:-12px 0 30px rgba(15,23,42,.08);
-
+    .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+        padding-top: 130px;
     }
 
-    .nav-menu.active{
-
-        right:0;
-
+    .hero-left {
+        align-items: center;
     }
 
-    .hamburger{
-
-        display:flex;
-
+    .hero h1 {
+        font-size: 44px;
     }
 
-    .hero{
-
-        min-height:auto;
-
+    .hero h2 {
+        font-size: 24px;
     }
 
-    .hero h1{
-
-        font-size:44px;
-
+    .hero-description {
+        width: 100%;
     }
 
-    .hero h2{
-
-        font-size:24px;
-
+    .hero-right img {
+        width: 300px;
     }
 
-    .hero-description{
-
-        width:100%;
-
+    .hero::before {
+        width: 420px;
+        height: 420px;
+        top: -120px;
+        right: -220px;
     }
 
-    .hero-right img{
+    /* Section */
 
-        width:300px;
-
+    .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
-    .section-title{
-
-        flex-direction:column;
-
-        gap:10px;
-
-        align-items:flex-start;
-
-    }
-
-    .skills-container{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .project-container{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .certificate-container{
-
-        grid-template-columns:1fr;
-
+    .skills-container,
+    .project-container,
+    .certificate-container {
+        grid-template-columns: 1fr;
     }
 
 }
 
 
-/* ===========================================
+/* ===========================
    Mobile
-=========================================== */
+=========================== */
 
-@media(max-width:576px){
+@media (max-width:576px) {
 
-    html{
-
-        font-size:85%;
-
+    html {
+        font-size: 85%;
     }
 
-    .navbar{
-
-        padding:15px 20px;
-
+    .navbar {
+        height: 64px;
+        padding: 0 18px;
     }
 
-    section{
-
-        padding:70px 20px;
-
+    section {
+        padding: 70px 20px;
     }
 
-    .hero{
-
-        gap:40px;
-
+    .hero {
+        gap: 40px;
     }
 
-    .hero-number{
-
-        font-size:12px;
-
+    .hero-number {
+        font-size: 12px;
     }
 
-    .hero h1{
-
-        font-size:38px;
-
-        line-height:1.2;
-
+    .hero h1 {
+        font-size: 38px;
+        line-height: 1.2;
     }
 
-    .hero h2{
-
-        font-size:22px;
-
+    .hero h2 {
+        font-size: 22px;
     }
 
-    .hero-description{
-
-        font-size:15px;
-
+    .hero-description {
+        font-size: 15px;
     }
 
-    .hero-right img{
-
-        width:240px;
-
+    .hero-right img {
+        width: 240px;
     }
 
-    .hero-button{
-
-        flex-direction:column;
-
-        width:100%;
-
+    .hero-button {
+        flex-direction: column;
+        width: 100%;
     }
 
     .btn,
-    .btn-outline{
-
-        width:100%;
-
-        text-align:center;
-
+    .btn-outline {
+        width: 100%;
+        text-align: center;
     }
 
-    .timeline-item{
-
-        padding:20px;
-
+    .timeline-item {
+        padding: 20px;
     }
 
-    .contact-container{
-
-        flex-direction:column;
-
-        gap:20px;
-
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    footer{
-
-        text-align:center;
-
+    footer {
+        text-align: center;
     }
 
 }
 
 
-/* ===========================================
+/* ===========================
    Small Phone
-=========================================== */
+=========================== */
 
-@media(max-width:400px){
+@media (max-width:400px) {
 
-    html{
-        font-size:82%;
+    html {
+        font-size: 82%;
     }
-    .hero h1{
-        font-size:32px;
+
+    .logo {
+        font-size: 18px;
     }
-    .hero h2{
-        font-size:18px;
+
+    .hero h1 {
+        font-size: 32px;
     }
-    .hero-right img{
-        width:200px;
+
+    .hero h2 {
+        font-size: 18px;
     }
-    .logo{
-        font-size:18px;
+
+    .hero-right img {
+        width: 200px;
     }
+
 }
 
-/* ===========================================
+
+/* ===========================
    Large Screen
-=========================================== */
+=========================== */
 
-@media(min-width:1440px){
-    .hero{
-        max-width:1400px;
-        margin:auto;
+@media (min-width:1440px) {
+
+    .hero,
+    section {
+        max-width: 1400px;
+        margin: auto;
     }
-    section{
-        max-width:1400px;
-        margin:auto;
-    }
+
 }
 
-/* ===========================================
+
+/* ===========================
    Extra Large Screen
-=========================================== */
-@media(min-width:1800px){
-    html{
-        font-size:110%;
-    }
-}
+=========================== */
 
-@media(max-width:768px){
-    .hero{
-        padding-top:130px;
+@media (min-width:1800px) {
+
+    html {
+        font-size: 110%;
     }
 
-    .hero::before{
-        width:440px;
-        height:440px;
-        top:-120px;
-        right:-230px;
-    }
-}
-
-@media(max-width:768px){
-    .navbar,
-    header.is-scrolled .navbar{
-        top:12px;
-        width:calc(100% - 32px);
-        height:60px;
-        padding:0 18px;
-        border-radius:16px;
-    }
-
-    .nav-menu{
-        top:84px;
-        right:calc(-100% - 24px);
-        height:calc(100vh - 100px);
-        border-radius:16px 0 0 16px;
-    }
-
-    .nav-menu.active{
-        right:0;
-    }
 }
