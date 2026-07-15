@@ -275,7 +275,7 @@ header {
     font-weight: 700;
     letter-spacing: 2px;
 
-    color: var(--text);
+    color: #ffffff;
     text-decoration: none;
 
     transition: .3s;
@@ -1323,11 +1323,6 @@ header.is-scrolled .navbar {
     box-shadow: 0 8px 24px rgba(15, 23, 42, .05);
 }
 
-.logo {
-    color: var(--text);
-    letter-spacing: 1.5px;
-}
-
 .nav-menu a {
     color: var(--text-light);
     font-size: 14px;
@@ -1584,29 +1579,6 @@ header.is-scrolled .navbar {
     background: rgba(255, 255, 255, .86);
     border-color: rgba(245, 158, 11, .20);
     box-shadow: 0 14px 30px rgba(17, 24, 39, .10), 0 4px 14px rgba(245, 158, 11, .07);
-}
-
-.logo {
-    color: transparent;
-    font-size: 0;
-    font-weight: 700;
-    letter-spacing: 0;
-}
-
-.logo::before {
-    content: "RND";
-    color: var(--text);
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-}
-
-.logo::after {
-    content: "_";
-    color: var(--primary);
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 0;
 }
 
 .nav-menu {
