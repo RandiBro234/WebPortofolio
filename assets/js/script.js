@@ -1,26 +1,17 @@
 /* ==========================================
    MOBILE MENU
 ========================================== */
-
 const hamburger = document.querySelector(".hamburger");
-
 const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click",()=>{
-
+hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
-
 });
 
-
-document.querySelectorAll(".nav-menu a").forEach(link=>{
-
-    link.addEventListener("click",()=>{
-
+document.querySelectorAll(".nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
         navMenu.classList.remove("active");
-
     });
-
 });
 
 
@@ -30,13 +21,13 @@ document.querySelectorAll(".nav-menu a").forEach(link=>{
 
 const scrollBtn = document.getElementById("scrollTop");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 400){
+    if (window.scrollY > 400) {
 
         scrollBtn.classList.add("show");
 
-    }else{
+    } else {
 
         scrollBtn.classList.remove("show");
 
@@ -45,13 +36,13 @@ window.addEventListener("scroll",()=>{
 });
 
 
-scrollBtn.addEventListener("click",()=>{
+scrollBtn.addEventListener("click", () => {
 
     window.scrollTo({
 
-        top:0,
+        top: 0,
 
-        behavior:"smooth"
+        behavior: "smooth"
 
     });
 
@@ -61,41 +52,23 @@ scrollBtn.addEventListener("click",()=>{
 /* ==========================================
    ACTIVE NAVBAR
 ========================================== */
-
 const sections = document.querySelectorAll("section");
-
 const navLinks = document.querySelectorAll(".nav-menu a");
-
-window.addEventListener("scroll",()=>{
-
+window.addEventListener("scroll", () => {
     let current = "";
-
-    sections.forEach(section=>{
-
-        const top = section.offsetTop-150;
-
+    sections.forEach(section => {
+        const top = section.offsetTop - 150;
         const height = section.clientHeight;
-
-        if(scrollY >= top){
-
+        if (scrollY >= top) {
             current = section.getAttribute("id");
-
         }
-
     });
-
-    navLinks.forEach(link=>{
-
+    navLinks.forEach(link => {
         link.classList.remove("active");
-
-        if(link.getAttribute("href")=="#"+current){
-
+        if (link.getAttribute("href") == "#" + current) {
             link.classList.add("active");
-
         }
-
     });
-
 });
 
 
@@ -104,30 +77,20 @@ window.addEventListener("scroll",()=>{
 ========================================== */
 
 const reveal = document.querySelectorAll(
-
-".section-title,.skill-card,.project-card,.timeline-item,.certificate-card,.stat-card"
-
+    ".section-title,.skill-card,.project-card,.timeline-item,.certificate-card,.stat-card"
 );
 
-function revealElement(){
-
-    reveal.forEach(item=>{
-
+function revealElement() {
+    reveal.forEach(item => {
         const windowHeight = window.innerHeight;
-
         const top = item.getBoundingClientRect().top;
-
-        if(top < windowHeight-100){
-
+        if (top < windowHeight - 100) {
             item.classList.add("show");
-
         }
-
     });
-
 }
 
-window.addEventListener("scroll",revealElement);
+window.addEventListener("scroll", revealElement);
 
 revealElement();
 
@@ -138,19 +101,19 @@ revealElement();
 
 const cards = document.querySelectorAll(".project-card");
 
-cards.forEach(card=>{
+cards.forEach(card => {
 
-    card.addEventListener("mousemove",(e)=>{
+    card.addEventListener("mousemove", (e) => {
 
         const rect = card.getBoundingClientRect();
 
-        const x = e.clientX-rect.left;
+        const x = e.clientX - rect.left;
 
-        const y = e.clientY-rect.top;
+        const y = e.clientY - rect.top;
 
-        card.style.setProperty("--x",x+"px");
+        card.style.setProperty("--x", x + "px");
 
-        card.style.setProperty("--y",y+"px");
+        card.style.setProperty("--y", y + "px");
 
     });
 
