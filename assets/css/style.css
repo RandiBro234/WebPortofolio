@@ -1340,17 +1340,14 @@ header.is-scrolled .navbar {
 
 .hero {
     position: relative;
-    isolation: isolate;
-    gap: 72px;
+    overflow: hidden;
 }
 
 .hero::before {
-    width: 680px;
-    height: 680px;
-    top: -250px;
-    right: -220px;
-    background: radial-gradient(circle, rgba(245, 158, 11, .10) 0%, rgba(245, 158, 11, .035) 32%, transparent 69%);
-    animation: none;
+    width: 520px;
+    height: 520px;
+    top: -170px;
+    right: -140px;
 }
 
 .hero h1 {
@@ -1667,4 +1664,17 @@ header.is-scrolled .navbar {
 .nav-menu a.active {
     color: #fff;
     font-weight: 600;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+main,
+header,
+section,
+.hero {
+    overflow-x: clip;
 }
