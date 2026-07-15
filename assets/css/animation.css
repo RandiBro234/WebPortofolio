@@ -58,13 +58,13 @@
 
 .btn:hover{
 
-    transform:translateY(-6px) scale(1.03);
+    transform:translateY(-2px);
 
 }
 
 .btn-outline:hover{
 
-    transform:translateY(-6px);
+    transform:translateY(-2px);
 
 }
 
@@ -90,7 +90,7 @@
 
 .hero-right img{
 
-    animation:floating 5s ease-in-out infinite;
+    animation:none;
 
 }
 
@@ -110,8 +110,9 @@
     border-radius:50%;
 
     background:radial-gradient(circle,
-        rgba(120,120,255,.18),
-        transparent 70%);
+        rgba(245,158,11,.10) 0%,
+        rgba(245,158,11,.035) 32%,
+        transparent 69%);
 
     top:-180px;
 
@@ -119,7 +120,7 @@
 
     z-index:-1;
 
-    animation:gradientMove 8s infinite alternate;
+    animation:none;
 
 }
 
@@ -178,7 +179,7 @@
 
 .project-card:hover::before{
 
-    opacity:1;
+    opacity:0;
 
 }
 
@@ -194,7 +195,7 @@
 
 .skill-card:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-4px);
 
 }
 
@@ -210,7 +211,7 @@
 
 .certificate-card:hover{
 
-    transform:translateY(-10px) scale(1.02);
+    transform:translateY(-4px);
 
 }
 
@@ -245,7 +246,7 @@
 
 .contact-links a:hover::before{
 
-    left:100%;
+    left:-100%;
 
 }
 
@@ -261,7 +262,7 @@
 
 #scrollTop:hover{
 
-    transform:translateY(-8px) rotate(10deg);
+    transform:translateY(-3px);
 
 }
 
@@ -277,13 +278,13 @@
 
 .nav-menu a.active{
 
-    color:var(--primary);
+    color:#fff;
 
 }
 
 .nav-menu a.active::after{
 
-    width:100%;
+    width:calc(100% - 20px);
 
 }
 

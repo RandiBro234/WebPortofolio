@@ -37,12 +37,14 @@ window.addEventListener("scroll",()=>{
 
     if(window.scrollY > 80){
 
-        header.style.boxShadow="0 10px 25px rgba(0,0,0,.08)";
+        header.classList.add("is-scrolled");
 
     }else{
 
-        header.style.boxShadow="none";
+        header.classList.remove("is-scrolled");
 
     }
 
 });
+
+window.dispatchEvent(new Event("scroll"));
