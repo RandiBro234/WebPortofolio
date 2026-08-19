@@ -169,6 +169,11 @@
         padding: 26px 22px;
     }
 
+    /* tech stack stacks to one column so cards don't cramp */
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
     .project-content {
         padding: 26px 22px;
     }
