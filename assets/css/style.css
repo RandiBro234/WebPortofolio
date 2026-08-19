@@ -46,10 +46,14 @@
 
 html {
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
+    overflow-x: clip;
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.7;
@@ -253,7 +257,9 @@ button {
     border-left: 1px solid var(--line-strong);
     padding: calc(var(--header-h) + 32px) 36px 36px;
     transform: translateX(102%);
-    transition: transform .38s cubic-bezier(.22, .74, .3, .9);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform .38s cubic-bezier(.22, .74, .3, .9), visibility 0s linear .38s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -262,6 +268,9 @@ button {
 
 .mobile-drawer.open {
     transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform .38s cubic-bezier(.22, .74, .3, .9), visibility 0s linear 0s;
 }
 
 .drawer-menu {
