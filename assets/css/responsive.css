@@ -1,245 +1,159 @@
-/* =====================================================
-   RESPONSIVE DESIGN
-===================================================== */
+/* ==========================================
+   CONTROL-DESK / DARK INSTRUMENT
+   Responsive (stepless, 400px - 992px).
+   ========================================== */
 
+/* ==========================================
+   <= 992px
+   ========================================== */
 
-/* ===========================
-   Laptop
-=========================== */
+@media (max-width: 992px) {
 
-@media (max-width:1200px) {
-
+    /* hero stacks, centered */
     .hero {
-        gap: 40px;
+        padding: calc(var(--header-h) + 56px) 0 72px;
     }
 
-    .hero h1 {
-        font-size: 56px;
-    }
-
-}
-
-
-/* ===========================
-   Tablet Landscape
-=========================== */
-
-@media (max-width:992px) {
-
-    html {
-        font-size: 95%;
-    }
-
-    .navbar {
-        padding: 0 32px;
-    }
-
-    section {
-        padding: 90px 40px;
-    }
-
-    .hero {
+    .hero-grid {
         grid-template-columns: 1fr;
-        text-align: center;
-        gap: 60px;
+        gap: 72px;
+        justify-items: center;
     }
 
     .hero-left {
-        align-items: center;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .hero-number {
+        justify-content: center;
+    }
+
+    .hero-description {
+        margin: 0 auto;
     }
 
     .hero-button {
         justify-content: center;
     }
 
-    .hero-right img {
-        width: 340px;
+    .hero-right {
+        justify-content: center;
+        width: 100%;
     }
 
+    .portrait-panel {
+        width: min(430px, 100%);
+    }
+
+    /* readout becomes a separate full-width strip */
+    .readout-card {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin-top: 16px;
+        min-width: 0;
+        width: 100%;
+    }
+
+    /* skills / projects / certificates: 2 columns */
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .project-container {
+    .project-container,
+    .certificate-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* section rule still visible here */
 }
 
+/* ==========================================
+   <= 768px
+   ========================================== */
 
-/* ===========================
-   Tablet & Mobile
-=========================== */
-
-@media (max-width:768px) {
-
-    html {
-        font-size: 90%;
-    }
-
-    section {
-        padding: 80px 25px;
-    }
-
-    /* Navbar */
+@media (max-width: 768px) {
 
     .navbar {
-        top: 12px;
-        width: calc(100% - 30px);
-        height: 68px;
-        padding: 0 22px;
-        border-radius: 18px;
+        height: 64px;
     }
 
-    .logo {
-        font-size: 22px;
+    .site-header {
+        --header-h: 64px;
+    }
+
+    .hero {
+        --header-h: 64px;
+    }
+
+    .nav-menu {
+        display: none;
     }
 
     .hamburger {
         display: flex;
     }
 
-    .nav-menu {
-
-        position: fixed;
-
-        top: 92px;
-        right: -300px;
-
-        width: 260px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 22px;
-
-        padding: 30px;
-
-        background: #ffffff;
-        /* gunakan warna solid */
-
-        opacity: 1;
-
-        border-radius: 18px;
-
-        box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
-
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-
-        transition: .35s ease;
-
-        z-index: 9999;
-
+    .mobile-drawer {
+        --header-h: 64px;
     }
 
-    .nav-menu.active {
-        right: 15px;
-    }
+    /* drawer is always present, hidden off-canvas until .open */
 
-    .nav-menu a {
-        color: #111827 !important;
-        font-size: 16px;
-        font-weight: 600;
-    }
-
-    /* Hero */
-
-    .hero {
-        min-height: auto;
+    /* contact collapses */
+    .contact-wrapper {
         grid-template-columns: 1fr;
-        text-align: center;
-        gap: 50px;
-        padding-top: 130px;
-    }
-
-    .hero-left {
-        align-items: center;
-    }
-
-    .hero h1 {
-        font-size: 44px;
-    }
-
-    .hero h2 {
-        font-size: 24px;
-    }
-
-    .hero-description {
-        width: 100%;
-    }
-
-    .hero-right img {
-        width: 300px;
-    }
-
-    .hero::before {
-        width: 420px;
-        height: 420px;
-        top: -120px;
-        right: -220px;
-    }
-
-    /* Section */
-
-    .section-title {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .skills-container,
-    .project-container,
-    .certificate-container {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* ===========================
-   Mobile
-=========================== */
-
-@media (max-width:576px) {
-
-    html {
-        font-size: 85%;
-    }
-
-    .navbar {
-        height: 64px;
-        padding: 0 18px;
-    }
-
-    section {
-        padding: 70px 20px;
-    }
-
-    .hero {
         gap: 40px;
     }
 
-    .hero-number {
-        font-size: 12px;
+    .contact-info {
+        position: static;
     }
 
-    .hero h1 {
-        font-size: 38px;
-        line-height: 1.2;
+    /* statistics: 2x2 with correct separators */
+    .statistics-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .hero h2 {
-        font-size: 22px;
+    .stat-card:nth-child(odd) {
+        border-left: none;
     }
 
-    .hero-description {
-        font-size: 15px;
+    .stat-card:nth-child(n + 3) {
+        border-top: 1px solid var(--line);
     }
 
-    .hero-right img {
-        width: 240px;
+    /* section titles: hide rule, allow heading wrap */
+    .section-rule {
+        display: none;
     }
 
+    .section-heading {
+        white-space: normal;
+    }
+
+    .section-title {
+        margin-bottom: 44px;
+    }
+
+    .page-section {
+        padding: 80px 0;
+    }
+}
+
+/* ==========================================
+   <= 576px
+   ========================================== */
+
+@media (max-width: 576px) {
+
+    .container-wide,
+    .container {
+        padding: 0 16px;
+    }
+
+    /* buttons stack full width */
     .hero-button {
         flex-direction: column;
         width: 100%;
@@ -248,121 +162,90 @@
     .btn,
     .btn-outline {
         width: 100%;
-        text-align: center;
     }
 
-    .timeline-item {
-        padding: 20px;
+    /* cards get tighter padding */
+    .skill-card {
+        padding: 26px 22px;
     }
 
-    .contact-container {
+    .project-content {
+        padding: 26px 22px;
+    }
+
+    .certificate-card {
+        padding: 26px 22px;
+    }
+
+    .skill-card {
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto;
+        align-items: center;
+        column-gap: 16px;
+    }
+
+    .skill-card p {
+        grid-column: 1 / -1;
+        min-height: 0;
+    }
+
+    .skill-bar {
+        grid-column: 1 / -1;
+        margin-top: 0;
+    }
+
+    .skill-percent {
+        justify-self: end;
+    }
+
+    /* readout rows stack vertically on very small phones */
+    .readout-row {
+        align-items: flex-start;
         flex-direction: column;
-        gap: 20px;
+        gap: 2px;
     }
 
-    footer {
-        text-align: center;
+    .readout-value {
+        text-align: left;
     }
 
+    /* footer content wraps */
+    .footer-content {
+        flex-wrap: wrap;
+    }
+
+    .footer-content span {
+        max-width: 100%;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
 }
 
+/* ==========================================
+   <= 400px
+   ========================================== */
 
-/* ===========================
-   Small Phone
-=========================== */
-
-@media (max-width:400px) {
-
-    html {
-        font-size: 82%;
-    }
-
-    .logo {
-        font-size: 18px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero h2 {
-        font-size: 18px;
-    }
-
-    .hero-right img {
-        width: 200px;
-    }
-
-}
-
-
-/* ===========================
-   Large Screen
-=========================== */
-
-@media (min-width:1440px) {
-
-    .hero,
-    section {
-        max-width: 1400px;
-        margin: auto;
-    }
-
-}
-
-
-/* ===========================
-   Extra Large Screen
-=========================== */
-
-@media (min-width:1800px) {
-
-    html {
-        font-size: 110%;
-    }
-
-}
-
-@media (max-width:768px) {
-
-    .nav-menu a {
-        color: #111 !important;
-        display: block;
-        width: 100%;
-    }
-
-    .nav-menu li {
-        width: 100%;
-        list-style: none;
-    }
-
-}
-
-@media (max-width:768px) {
-
-    html,
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
+@media (max-width: 400px) {
 
     .hero {
-        overflow: hidden;
+        padding-top: calc(var(--header-h) + 40px);
     }
 
-    .hero::before {
-        width: 260px;
-        height: 260px;
-        top: -80px;
-        right: -120px;
-        filter: blur(60px);
+    .hero-title {
+        font-size: 2.35rem;
     }
 
-    .navbar::before {
-        width: 110px;
-        height: 50px;
-        right: 18px;
-        filter: blur(18px);
+    .hero-typing {
+        font-size: .85rem;
     }
 
+    .section-index {
+        font-size: .7rem;
+    }
+
+    .readout-card {
+        padding: 14px 16px;
+    }
 }

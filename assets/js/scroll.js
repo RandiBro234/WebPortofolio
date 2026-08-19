@@ -8,6 +8,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         e.preventDefault();
 
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
         const target = document.querySelector(this.getAttribute("href"));
 
         if(target){
@@ -16,7 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
                 top: target.offsetTop - 80,
 
-                behavior: "smooth"
+                behavior: reduceMotion ? "auto" : "smooth"
 
             });
 
